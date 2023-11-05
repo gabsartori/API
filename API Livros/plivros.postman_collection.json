@@ -1,0 +1,702 @@
+{
+	"info": {
+		"_postman_id": "ce8cee16-f229-4d7b-a1da-620edbb7bd32",
+		"name": "plivros",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25310660"
+	},
+	"item": [
+		{
+			"name": "livro",
+			"item": [
+				{
+					"name": "listarTodos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJ1cGYiLCJpYXQiOjE2OTg5NDc4MTgsInBhc3N3b3JkIjoic2Rsa2pzZG9pam9ucHZmNjV2NGU2ZnY1ZTZ2ZXIiLCJleHAiOjE3MDE0Njc4MTh9.Xc3TTfnGWsLG3AG5xsqPkbkDWtgLY6xpLLhLYx2uvHM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/plivros/livro/listarTodos?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJ1cGYiLCJpYXQiOjE2OTgyNzYwMjQsInBhc3N3b3JkIjoic2Rsa2pzZG9pam9ucHZmNjV2NGU2ZnY1ZTZ2ZXIiLCJleHAiOjE3MDA3OTYwMjR9.IcjLTTenPDDsb1bE51LGjey0zZnYnThiKvJPs7o5h8s",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plivros",
+								"livro",
+								"listarTodos"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJ1cGYiLCJpYXQiOjE2OTgyNzYwMjQsInBhc3N3b3JkIjoic2Rsa2pzZG9pam9ucHZmNjV2NGU2ZnY1ZTZ2ZXIiLCJleHAiOjE3MDA3OTYwMjR9.IcjLTTenPDDsb1bE51LGjey0zZnYnThiKvJPs7o5h8s"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJ1cGYiLCJpYXQiOjE2OTgyNzYwMjQsInBhc3N3b3JkIjoic2Rsa2pzZG9pam9ucHZmNjV2NGU2ZnY1ZTZ2ZXIiLCJleHAiOjE3MDA3OTYwMjR9.IcjLTTenPDDsb1bE51LGjey0zZnYnThiKvJPs7o5h8s",
+								"type": "text"
+							},
+							{
+								"key": "id",
+								"value": "4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/plivros/livro/buscarPorId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plivros",
+								"livro",
+								"buscarPorId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inserir",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJ1cGYiLCJpYXQiOjE2OTgyNzYwMjQsInBhc3N3b3JkIjoic2Rsa2pzZG9pam9ucHZmNjV2NGU2ZnY1ZTZ2ZXIiLCJleHAiOjE3MDA3OTYwMjR9.IcjLTTenPDDsb1bE51LGjey0zZnYnThiKvJPs7o5h8s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"autor\": \"teste\",\r\n    \"nome_livro\": \"teste\",\r\n    \"user\": {\"id\": 2},\r\n    \"tipo\": {\"id\": 1}\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/plivros/livro/inserir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plivros",
+								"livro",
+								"inserir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJ1cGYiLCJpYXQiOjE2OTgyNzYwMjQsInBhc3N3b3JkIjoic2Rsa2pzZG9pam9ucHZmNjV2NGU2ZnY1ZTZ2ZXIiLCJleHAiOjE3MDA3OTYwMjR9.IcjLTTenPDDsb1bE51LGjey0zZnYnThiKvJPs7o5h8s",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"nome_livro\": \"teste alt\",\r\n    \"user\": {\"id\": 1},\r\n    \"tipo\": {\"id\": 2}\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/plivros/livro/atualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plivros",
+								"livro",
+								"atualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJ1cGYiLCJpYXQiOjE2OTgyNzYwMjQsInBhc3N3b3JkIjoic2Rsa2pzZG9pam9ucHZmNjV2NGU2ZnY1ZTZ2ZXIiLCJleHAiOjE3MDA3OTYwMjR9.IcjLTTenPDDsb1bE51LGjey0zZnYnThiKvJPs7o5h8s",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "id",
+								"value": "4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/plivros/livro/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plivros",
+								"livro",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "authorize",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "maria@gmail.com",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "000",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/plivros/user/authorize?email=maria@gmail.com&password=000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plivros",
+								"user",
+								"authorize"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "maria@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarTodos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJ1cGYiLCJpYXQiOjE2OTgyNzY2MzgsInBhc3N3b3JkIjoic2Rsa2pzZG9pam9ucHZmNjV2NGU2ZnY1ZTZ2ZXIiLCJleHAiOjE3MDA3OTY2Mzh9.h2y8YZ16Z8AXtKvYavYlrH23kNXh6mhP91YQ5Ga-l6Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/plivros/user/listarTodos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plivros",
+								"user",
+								"listarTodos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "id",
+								"value": "3",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJ1cGYiLCJpYXQiOjE2OTgyNzY2MzgsInBhc3N3b3JkIjoic2Rsa2pzZG9pam9ucHZmNjV2NGU2ZnY1ZTZ2ZXIiLCJleHAiOjE3MDA3OTY2Mzh9.h2y8YZ16Z8AXtKvYavYlrH23kNXh6mhP91YQ5Ga-l6Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/plivros/user/buscarPorId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plivros",
+								"user",
+								"buscarPorId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarPorLivroId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "idLivro",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJ1cGYiLCJpYXQiOjE2OTgyNzY2MzgsInBhc3N3b3JkIjoic2Rsa2pzZG9pam9ucHZmNjV2NGU2ZnY1ZTZ2ZXIiLCJleHAiOjE3MDA3OTY2Mzh9.h2y8YZ16Z8AXtKvYavYlrH23kNXh6mhP91YQ5Ga-l6Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/plivros/user/buscarPorLivroId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plivros",
+								"user",
+								"buscarPorLivroId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarPorEmail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJ1cGYiLCJpYXQiOjE2OTgyNzY2MzgsInBhc3N3b3JkIjoic2Rsa2pzZG9pam9ucHZmNjV2NGU2ZnY1ZTZ2ZXIiLCJleHAiOjE3MDA3OTY2Mzh9.h2y8YZ16Z8AXtKvYavYlrH23kNXh6mhP91YQ5Ga-l6Y",
+								"type": "text"
+							},
+							{
+								"key": "email",
+								"value": "maria@gmail.com",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/plivros/user/buscarPorEmail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plivros",
+								"user",
+								"buscarPorEmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJ1cGYiLCJpYXQiOjE2OTgyNzY2MzgsInBhc3N3b3JkIjoic2Rsa2pzZG9pam9ucHZmNjV2NGU2ZnY1ZTZ2ZXIiLCJleHAiOjE3MDA3OTY2Mzh9.h2y8YZ16Z8AXtKvYavYlrH23kNXh6mhP91YQ5Ga-l6Y",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"email\": \"gabriela@gmail.com\",\r\n    \"senha\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/plivros/user/atualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plivros",
+								"user",
+								"atualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inserir",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJ1cGYiLCJpYXQiOjE2OTgyNzY2MzgsInBhc3N3b3JkIjoic2Rsa2pzZG9pam9ucHZmNjV2NGU2ZnY1ZTZ2ZXIiLCJleHAiOjE3MDA3OTY2Mzh9.h2y8YZ16Z8AXtKvYavYlrH23kNXh6mhP91YQ5Ga-l6Y",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome_user\": \"Gabriela\",\r\n    \"email\": \"gabriela@gmail.com\",\r\n    \"senha\":\"123\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/plivros/user/inserir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plivros",
+								"user",
+								"inserir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "id",
+								"value": "4",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJ1cGYiLCJpYXQiOjE2OTgyODEzNDYsInBhc3N3b3JkIjoic2Rsa2pzZG9pam9ucHZmNjV2NGU2ZnY1ZTZ2ZXIiLCJleHAiOjE3MDA4MDEzNDZ9.yJ-dUNR691bP-j1K1Qezno-U5AZnGdEPg9QCsbrB6UM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/plivros/user/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plivros",
+								"user",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tipoLivro",
+			"item": [
+				{
+					"name": "listarTodos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJ1cGYiLCJpYXQiOjE2OTg5NDc4MTgsInBhc3N3b3JkIjoic2Rsa2pzZG9pam9ucHZmNjV2NGU2ZnY1ZTZ2ZXIiLCJleHAiOjE3MDE0Njc4MTh9.Xc3TTfnGWsLG3AG5xsqPkbkDWtgLY6xpLLhLYx2uvHM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/plivros/tipoLivro/listarTodos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plivros",
+								"tipoLivro",
+								"listarTodos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarPorId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJ1cGYiLCJpYXQiOjE2OTg5NDc4MTgsInBhc3N3b3JkIjoic2Rsa2pzZG9pam9ucHZmNjV2NGU2ZnY1ZTZ2ZXIiLCJleHAiOjE3MDE0Njc4MTh9.Xc3TTfnGWsLG3AG5xsqPkbkDWtgLY6xpLLhLYx2uvHM",
+								"type": "text"
+							},
+							{
+								"key": "id",
+								"value": "4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/plivros/tipoLivro/buscarPorId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plivros",
+								"tipoLivro",
+								"buscarPorId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscarPorLivroId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "idLivro",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJ1cGYiLCJpYXQiOjE2OTgyODEzNDYsInBhc3N3b3JkIjoic2Rsa2pzZG9pam9ucHZmNjV2NGU2ZnY1ZTZ2ZXIiLCJleHAiOjE3MDA4MDEzNDZ9.yJ-dUNR691bP-j1K1Qezno-U5AZnGdEPg9QCsbrB6UM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/plivros/tipoLivro/buscarPorLivroId?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJ1cGYiLCJpYXQiOjE2OTgyODEzNDYsInBhc3N3b3JkIjoic2Rsa2pzZG9pam9ucHZmNjV2NGU2ZnY1ZTZ2ZXIiLCJleHAiOjE3MDA4MDEzNDZ9.yJ-dUNR691bP-j1K1Qezno-U5AZnGdEPg9QCsbrB6UM&idLivro=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plivros",
+								"tipoLivro",
+								"buscarPorLivroId"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJ1cGYiLCJpYXQiOjE2OTgyODEzNDYsInBhc3N3b3JkIjoic2Rsa2pzZG9pam9ucHZmNjV2NGU2ZnY1ZTZ2ZXIiLCJleHAiOjE3MDA4MDEzNDZ9.yJ-dUNR691bP-j1K1Qezno-U5AZnGdEPg9QCsbrB6UM"
+								},
+								{
+									"key": "idLivro",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inserir",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJ1cGYiLCJpYXQiOjE2OTg5NDc4MTgsInBhc3N3b3JkIjoic2Rsa2pzZG9pam9ucHZmNjV2NGU2ZnY1ZTZ2ZXIiLCJleHAiOjE3MDE0Njc4MTh9.Xc3TTfnGWsLG3AG5xsqPkbkDWtgLY6xpLLhLYx2uvHM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipo_livro\": \"teste\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/plivros/tipoLivro/inserir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plivros",
+								"tipoLivro",
+								"inserir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJ1cGYiLCJpYXQiOjE2OTg5NDc4MTgsInBhc3N3b3JkIjoic2Rsa2pzZG9pam9ucHZmNjV2NGU2ZnY1ZTZ2ZXIiLCJleHAiOjE3MDE0Njc4MTh9.Xc3TTfnGWsLG3AG5xsqPkbkDWtgLY6xpLLhLYx2uvHM",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"tipo_livro\": \"teste alt\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/plivros/tipoLivro/atualizar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plivros",
+								"tipoLivro",
+								"atualizar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJpYUBnbWFpbC5jb20iLCJpc3MiOiJ1cGYiLCJpYXQiOjE2OTg5NDc4MTgsInBhc3N3b3JkIjoic2Rsa2pzZG9pam9ucHZmNjV2NGU2ZnY1ZTZ2ZXIiLCJleHAiOjE3MDE0Njc4MTh9.Xc3TTfnGWsLG3AG5xsqPkbkDWtgLY6xpLLhLYx2uvHM",
+								"type": "text"
+							},
+							{
+								"key": "id",
+								"value": "4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/plivros/tipoLivro/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"plivros",
+								"tipoLivro",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
